@@ -10,12 +10,11 @@ namespace AddressBookSystem
     {
         static void Main(string[] args)
         {
-
             ContactDetails add = new ContactDetails();
             bool flag = true;
             while (flag)
             {
-                Console.Write("1.Add Contact\n2.Display\n3.SearchContactByState\n4.exit\nEnter your option: ");
+                Console.Write("1.Add Contact\n2.Display\n3.SearchContactByState\n4.CountPersonInSameState\n5.exit\nEnter your option: ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -29,6 +28,9 @@ namespace AddressBookSystem
                         add.SearchByState();
                         break;
                     case 4:
+                        add.CountAddress();
+                        break;
+                    case 5:
                         flag = false;
                         break;
                 }
