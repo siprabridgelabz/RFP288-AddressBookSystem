@@ -14,7 +14,7 @@ namespace AddressBookSystem
             bool flag = true;
             while (flag)
             {
-                Console.Write("1.Add Contact\n2.Display\n3.exit\nEnter your option: ");
+                Console.Write("1.Add Contact\n2.Display\n3.SearchContactByCity\n4.exit\nEnter your option: ");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -24,14 +24,18 @@ namespace AddressBookSystem
                     case 2:
                         add.Display();
                         break;
-
                     case 3:
+                        add.SearchByCity();
+                        break;
+                    case 4:
                         flag = false;
                         break;
                 }
             }
             Console.ReadLine();
         }
+       
+        
         
     }
     
